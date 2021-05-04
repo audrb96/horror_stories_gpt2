@@ -13,8 +13,8 @@ requests_queue = Queue()
 BATCH_SIZE = 1
 CHECK_INTERVAL = 0.1
 
-tokenizer = AutoTokenizer.from_pretrained("SIC98/GPT2-python-code-generator")
-model = AutoModelWithLMHead.from_pretrained("SIC98/GPT2-python-code-generator", return_dict=True)
+tokenizer = AutoTokenizer.from_pretrained("abbas/gpt2-horror-stories")
+model = AutoModelWithLMHead.from_pretrained("abbas/gpt2-horror-stories", return_dict=True)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 
@@ -92,8 +92,8 @@ def run_word(sequence, num_samples):
         return 500
 
 
-@app.route("/gpt2-python-code-generator/<type>", methods=['POST'])
-def gpt2_python_code_generater(type):
+@app.route("/gpt2-horror-stories/<type>", methods=['POST'])
+def gpt2_horror_stories(type):
     if type != 'short' and type != 'long' :
         return jsonify({'error': 'This is the wrong address.'}), 400
 
