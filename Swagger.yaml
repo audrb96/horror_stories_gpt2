@@ -1,7 +1,7 @@
 openapi: 3.0.1
 
 info:
-  title: ainize-gpt2-cover-letter
+  title: ainize-gpt2-python-code-generater
   description: |
       generate python code generater based fine-tuned gpt2 model
   contact:
