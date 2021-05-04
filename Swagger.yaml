@@ -30,7 +30,7 @@ paths:
                 text:
                   type: string
                 num_samples:
-                  type: string
+                  type: int
       responses:
         '200':
           description: success
